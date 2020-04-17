@@ -16,6 +16,8 @@ export default class LockerLayoutManagement extends React.Component {
     }
 
     render() {
-       
+        return(
+            <div></div>
+        )
     }
 }

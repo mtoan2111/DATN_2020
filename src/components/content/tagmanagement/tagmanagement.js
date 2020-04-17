@@ -14,6 +14,8 @@ export default class TagManagement extends React.Component {
     
 
     render() {
-        
+        return(
+            <div></div>
+        )
     }
 }

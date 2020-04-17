@@ -13,5 +13,8 @@ export default class LockerHistoryReport extends React.Component {
     }
 
     render() {
+        return(
+            <div></div>
+        )
     }
 }

@@ -20,6 +20,8 @@ export default class LockerManagement extends React.Component {
     }
 
     render() {
-
+        return(
+            <div></div>
+        )
     }
 }

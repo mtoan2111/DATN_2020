@@ -12,6 +12,8 @@ export default class LockerRealTimeReport extends React.Component {
     }
 
     render() {
-        
+        return(
+            <div></div>
+        )
     }
 }

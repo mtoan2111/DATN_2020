@@ -14,5 +14,8 @@ export default class MapUserLockerManagement extends React.Component {
     }
 
     render() {
+        return(
+            <div></div>
+        )
     }
 }

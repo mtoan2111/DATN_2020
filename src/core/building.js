@@ -1,34 +1,6 @@
 import { ApiUri, server } from '../staticresources/resources'
 
 class Buildings {
-    createBuilding = async (name = '', addr = '', des = '') => {
-        try {
-            let url = ApiUri.building.createBuilding.uri;
-
-            let form = {
-                'token': localStorage.getItem('crfs'),
-                'name': name,
-                'addr': addr,
-                'des': des,
-            }
-
-            return await fetch(url, {
-                method: ApiUri.building.createBuilding.method,
-                mode: 'cors',
-                cache: 'no-cache',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Bearer ' + localStorage.getItem('token')
-                },
-                credentials: 'include',
-                referrerPolicy: 'no-referrer',
-                body: JSON.stringify(form)
-            }).then(response => response.json())
-                .catch(console.error);
-        }
-        catch{ }
-    }
-
     getBuilding = async (bId = 0, name = '', addr = '', page = 0) => {
         try {
             let url = ApiUri.building.getBuilding.uri;
@@ -47,35 +19,6 @@ class Buildings {
                 },
             })
                 .then(response => response.json())
-                .catch(console.error);
-        }
-        catch{ }
-    }
-
-    editBuilding = async (bId = 0, name = '', addr = '', des = '') => {
-        try {
-            let url = ApiUri.building.editBuilding.uri;
-
-            let form = {
-                'token': localStorage.getItem('crfs'),
-                'bId': bId,
-                'name': name,
-                'addr': addr,
-                'des': des,
-            }
-
-            return await fetch(url, {
-                method: ApiUri.building.editBuilding.method,
-                mode: 'cors',
-                cache: 'no-cache',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Bearer ' + localStorage.getItem('token')
-                },
-                credentials: 'include',
-                referrerPolicy: 'no-referrer',
-                body: JSON.stringify(form)
-            }).then(response => response.json())
                 .catch(console.error);
         }
         catch{ }
