@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 
+
 export default class ManageUserLockerManagement extends React.Component {
     constructor(props) {
         super(props);
@@ -16,6 +17,7 @@ export default class ManageUserLockerManagement extends React.Component {
 
   
     render() {
+        
         return(
             <div></div>
         )
