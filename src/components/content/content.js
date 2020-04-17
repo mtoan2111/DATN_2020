@@ -47,7 +47,6 @@ export default class Content extends React.Component {
                 return <LockerLayoutManagement />
             case 'warning':
                 return <WarningManagement />
-
             default:
                 return;
         };

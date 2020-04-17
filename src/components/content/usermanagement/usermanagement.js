@@ -4,6 +4,7 @@ import MaterialTable from 'material-table'
 import TableIcons from '../../common/materialicon'
 import Input from '../../common/input'
 import Button from '../../common/button'
+import Department from '../../../core/department'
 
 export default class UserManagement extends React.Component {
     NameInput = '';
@@ -29,12 +30,15 @@ export default class UserManagement extends React.Component {
     }
 
     componentDidMount() {
-
+        Department.getDepartment()
+            .then(value => {
+                console.log(value);
+            })
     }
 
     getDataFromServer = (query) => {
         return new Promise((resolve, reject) => {
-            User.getUser()
+            User.getUser(0, this.NameInput, '', '', '', 0, 0, 0, query.page + 1)
                 .then(value => {
                     resolve({
                         data: value.items,
